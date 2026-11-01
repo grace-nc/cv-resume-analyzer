@@ -104,7 +104,7 @@ The dataset must contain the following columns:
 Run the following command from the project root directory:
 
 ```bash
-python -m streamlit run app.py
+python -m streamlit run main.py
 ```
 
 The application will be available in your browser at:
