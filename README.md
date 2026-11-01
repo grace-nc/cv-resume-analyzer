@@ -1,66 +1,144 @@
-rapikan -> # 🧠⚙️ AI-Powered CV/Resume Screening & Semantic Search Tools
+# 🧠⚙️ AI-Powered CV/Resume Screening & Semantic Search
 
-A multi-page **Streamlit** web application that integrates Machine Learning, Sentence Transformers, and Google Gemini AI to streamline resume screening and advanced semantic search.
+A multi-page **Streamlit web application** that integrates Machine Learning, Deep Learning, Sentence Transformers, and Google Gemini AI to streamline resume screening and semantic resume retrieval.
 
 ---
 
 ## 🚀 Key Features
 
-1. **📝 CV Analyzer**
-   - **PDF Text Extraction**: Automatically extracts text from uploaded PDF resumes.
-   - **Machine Learning Similarity Scoring**: Calculates the semantic similarity score between a resume and a Job Description using Cosine Similarity.
-   - **AI-Powered Evaluation (Google Gemini LLM)**: Generates detailed evaluation reports, average scores (1-5 scale), and overall match assessments.
-   - **Export Report**: Allows downloading the complete analysis report as a `.txt` file.
+### 1. 📝 CV Analyzer
 
-2. **🔍 Semantic Search**
-   - Powered by Sentence Transformers (`all-MiniLM-L6-v2`) to find the most relevant resumes based on contextual meaning rather than exact keyword matches.
+- **PDF Text Extraction:** Automatically extracts text from uploaded PDF resumes.
+- **Similarity Scoring:** Evaluates resume–Job Description alignment using Sentence Transformers and Cosine Similarity.
+- **AI-Powered Evaluation:** Leverages Google Gemini AI (LLM) to generate detailed candidate evaluations, competency scores (1–5 scale), and overall match assessments.
+- **Export Analysis Report:** Allows users to download the generated evaluation report as a `.txt` file.
+
+### 2. 🔍 Semantic Search
+
+- **Contextual Resume Retrieval:** Uses Sentence Transformers (`all-MiniLM-L6-v2`) to retrieve and rank relevant resumes based on contextual meaning rather than exact keyword matches.
+- **Similarity Ranking:** Calculates cosine similarity between search queries and resume embeddings to identify the Top K most relevant resumes.
+- **Resume Details:** Displays candidate IDs, job titles, similarity scores, and resume content.
 
 ---
 
 ## 🛠️ Project Directory Structure
 
+```text
 project-folder/
 │
 ├── dataset/
-│   └── resume-dataset-cleaned.csv      # Cleaned resume dataset
-├── services/
-│   ├── pdf_extractor.py                # PDF text extraction utility
-│   ├── similarity_calculator_service.py # ML similarity calculation service
-│   ├── semantic_search_service.py      # Semantic search engine service
-│   └── llm_analyzer.py                 # Google Gemini AI analysis service
+│   └── resume-dataset-cleaned.csv
 │
-├── .env                                # Environment variables (API Key)
-├── app.py                              # Main Streamlit application file
-└── README.md                           # Project documentation
+├── services/
+│   ├── __init__.py
+│   ├── pdf_extractor.py
+│   ├── similarity_calculator_service.py
+│   ├── semantic_search_service.py
+│   └── llm_analyzer.py
+│
+├── .env
+├── .gitignore
+├── requirements.txt
+├── app.py
+└── README.md
+```
 
 ---
 
 ## ⚙️ System Requirements & Installation
 
-1. Clone or download this repository to your local machine.
+### 1. Clone the Repository
 
-2. Install the required dependencies:
-   ```bash
-   pip install streamlit pandas python-dotenv sentence-transformers scikit-learn PyPDF2 google-generativeai torch
-   ```
+```bash
+git clone <your-repository-url>
+cd <your-project-folder>
+```
 
-3. Configure Environment Variables:
-   Create a file named `.env` in the root directory of your project and add your Google Gemini API Key:
-   ```env
-   GEMINI_API_KEY=your_google_gemini_api_key_here
-   ```
+### 2. Create a Virtual Environment (Recommended)
 
-4. Prepare Your Dataset:
-   Place your dataset file inside the `dataset/` folder named `resume-dataset-cleaned.csv` containing columns: `id`, `category`, `job_title`, and `text`.
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+**Windows:**
+```bash
+venv\Scripts\activate
+```
+
+**macOS / Linux:**
+```bash
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+Install the required Python libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure Environment Variables
+
+Create a `.env` file in the root directory of your project and add your Google Gemini API key:
+
+```env
+GEMINI_API_KEY=your_google_gemini_api_key_here
+```
+
+**Note:** Keep your `.env` file private. Do not commit or upload API keys to GitHub.
+
+### 5. Prepare the Dataset
+
+Place the cleaned dataset inside the `dataset/` folder using the filename:
+
+`resume-dataset-cleaned.csv`
+
+The dataset must contain the following columns:
+
+| Column | Description |
+|---|---|
+| `id` | Unique resume identifier |
+| `category` | Resume/job category |
+| `job_title` | Job title associated with the resume |
+| `text` | Extracted resume content |
 
 ---
 
 ## ▶️ Running the Application
 
-Execute the following command in your terminal or command prompt within the project directory:
+Run the following command from the project root directory:
 
 ```bash
 python -m streamlit run app.py
 ```
 
-The application will launch automatically in your default browser at `http://localhost:8501`.
+The application will be available in your browser at:
+
+`http://localhost:8501`
+
+---
+
+## 🧰 Technologies & Libraries
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Streamlit | Interactive web application framework |
+| Sentence Transformers | Text embeddings and semantic representation |
+| PyTorch | Tensor operations and Top K retrieval |
+| Scikit-learn | Cosine similarity calculation |
+| Google Gemini AI | LLM-powered resume evaluation |
+| PDFMiner | PDF text extraction |
+| Pandas | Dataset loading and preprocessing |
+| Python-dotenv | Environment variable management |
+
+---
+
+## 📌 Notes
+
+- The Sentence Transformer models are pre-trained and used to generate text embeddings.
+- Cosine Similarity measures semantic similarity between resume and job description embeddings; it does not represent the probability of a candidate being hired.
+- Google Gemini API access requires a valid API key.
