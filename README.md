@@ -136,9 +136,3 @@ The application will be available in your browser at:
 | Python-dotenv | Environment variable management |
 
 ---
-
-## 📌 Notes
-
-- The Sentence Transformer models are pre-trained and used to generate text embeddings.
-- Cosine Similarity measures semantic similarity between resume and job description embeddings; it does not represent the probability of a candidate being hired.
-- Google Gemini API access requires a valid API key.
