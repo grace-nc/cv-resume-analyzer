@@ -1,6 +1,3 @@
-# cv-resume-analyzer-scorer
-Python | Machine Learning | NLP | AI
-
 # 🧠⚙️ AI-Powered CV/Resume Screening & Semantic Search Tools
 
 A multi-page **Streamlit** web application that integrates Machine Learning, Sentence Transformers, and Google Gemini AI to streamline resume screening and advanced semantic search.
