@@ -1,6 +1,6 @@
 # 🧠⚙️ AI-Powered CV/Resume Screening & Semantic Search
 
-A multi-page **Streamlit web application** that integrates Machine Learning, Deep Learning, Sentence Transformers, and Google Gemini AI to streamline resume screening and semantic resume retrieval.
+A multi-page **Streamlit mini application** that integrates Machine Learning, Deep Learning and Google Gemini AI to streamline resume screening and semantic resume retrieval.
 
 ---
 
@@ -26,8 +26,6 @@ A multi-page **Streamlit web application** that integrates Machine Learning, Dee
 ```text
 project-folder/
 │
-├── dataset/
-│   └── resume-dataset-cleaned.csv
 │
 ├── services/
 │   ├── __init__.py
