@@ -86,13 +86,7 @@ Create a `.env` file in the root directory of your project and add your Google G
 GEMINI_API_KEY=your_google_gemini_api_key_here
 ```
 
-**Note:** Keep your `.env` file private. Do not commit or upload API keys to GitHub.
-
 ### 5. Prepare the Dataset
-
-Place the cleaned dataset inside the `dataset/` folder using the filename:
-
-`resume-dataset-cleaned.csv`
 
 The dataset must contain the following columns:
 
