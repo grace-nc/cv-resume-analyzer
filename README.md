@@ -123,16 +123,16 @@ The application will be available in your browser at:
 
 ## 🧰 Technologies & Libraries
 
-| Technology | Purpose |
-|---|---|
-| Python | Core programming language |
-| Streamlit | Interactive web application framework |
-| Sentence Transformers | Text embeddings and semantic representation |
-| PyTorch | Tensor operations and Top K retrieval |
-| Scikit-learn | Cosine similarity calculation |
-| Google Gemini AI | LLM-powered resume evaluation |
-| PDFMiner | PDF text extraction |
-| Pandas | Dataset loading and preprocessing |
-| Python-dotenv | Environment variable management |
+| Technology |
+|---|
+| Python 
+| Streamlit |
+| Sentence Transformers |
+| PyTorch | 
+| Scikit-learn |
+| Google Gemini AI | 
+| PDFMiner | 
+| Pandas | 
+| Python-dotenv |
 
 ---
