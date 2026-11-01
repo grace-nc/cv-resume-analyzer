@@ -37,7 +37,7 @@ project-folder/
 ├── .env
 ├── .gitignore
 ├── requirements.txt
-├── app.py
+├── main.py
 └── README.md
 ```
 
