@@ -37,7 +37,6 @@ project-folder/
 
 ## ⚙️ System Requirements & Installation
 
-Ensure you have **Python 3.8+** installed on your system.
 
 1. Clone or download this repository to your local machine.
 
